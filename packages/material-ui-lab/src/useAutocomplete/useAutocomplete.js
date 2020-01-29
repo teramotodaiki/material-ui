@@ -586,7 +586,7 @@ export default function useAutocomplete(props) {
       case 'Enter':
         // Do not select value while IME is open
         if (event.nativeEvent.isComposing) {
-          return;
+          break;
         }
         if (highlightedIndexRef.current !== -1 && popupOpen) {
           // We don't want to validate the form.
